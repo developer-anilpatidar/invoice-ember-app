@@ -1,35 +1,35 @@
-<h1>Invoices</h1>
+<h1 class="alert alert-primary">Invoices</h1>
 
 {{#if responseMessage }}
-  <h4>{{responseMessage}}</h4>
+  <h4 class="alert alert-success text-center">{{responseMessage}}</h4>
 {{/if}}
 
 
-<div>
-  <div>
-    <div>
+<div class="container">
+  <span>New Invoice</span>
+  <div class="row">
+    <div class="col-lg-3">
       {{input type="text" value=amount placeholder="Enter Amount"}}
     </div>
-    <div>
+    <div class="col-lg-3">
       {{input type="date" value=date}}
     </div>
-    <div>
-      <button type="button" {{action 'saveInvoice'}}>Save</button>
+    <div class="col-lg-1">
+      <button type="button" class="button btn-success" {{action 'saveInvoice'}}>Save</button>
     </div>
   </div><br/>
-</div>
+</div><hr>
 
-
-<div>
-  <div>
-    <div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
       <h5>Filter</h5>
     </div>
-    <div>
+    <div class="col-lg-3">
       <span>From</span>
       {{input type="date" value=dateFrom}}
     </div>
-    <div>
+    <div class="col-lg-3">
       <span>To</span>
       {{input type="date" value=dateTo}}
     </div>
@@ -38,7 +38,7 @@
 
 <br><br>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Amount</th>

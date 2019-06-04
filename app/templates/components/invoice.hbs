@@ -6,16 +6,16 @@
     {{input type="date" value=date}}
   </td>
   <td>
-    <button type="button" {{action 'updateInvoice'}}>Update</button>
-    <button type="button" {{action 'destroy'}}>Delete</button>
+    <button type="button" class="button btn-success" {{action 'updateInvoice'}}>Update</button>
+    <button type="button" class="button btn-danger" {{action 'destroy'}}>Delete</button>
   </td>
 {{else}}
 
   <td>{{amount}}</td>
   <td>{{date}}</td>
   <td>
-    <button type="button" {{action 'changeEditMode'}}>Edit</button>
-    <button type="button" {{action 'destroy'}}>Delete</button>
+    <button type="button" class="button btn-info" {{action 'changeEditMode'}}>Edit</button>
+    <button type="button" class="button btn-danger" {{action 'destroy'}}>Delete</button>
   </td>
 
 {{/if}}
