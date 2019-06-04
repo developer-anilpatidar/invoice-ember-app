@@ -1,0 +1,19 @@
+<h1>Invoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |invoice|}}
+      <Invoice @invoice={{invoice}}>
+      </Invoice>
+    {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}
