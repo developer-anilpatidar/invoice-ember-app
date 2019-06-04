@@ -1,8 +1,23 @@
-<th>{{amount}}</th>
-<td>{{date}}</td>
-<td>
-  <button type="button">Edit</button>
-  <button type="button">Delete</button>
-</td>
+{{#if editMode }}
+  <td>
+    {{input type="text" value=amount placeholder="Enter Amount"}}
+  </td>
+  <td>
+    {{input type="date" value=date}}
+  </td>
+  <td>
+    <button type="button" {{action 'updateInvoice'}}>Update</button>
+    <button type="button" {{action 'destroy'}}>Delete</button>
+  </td>
+{{else}}
+
+  <td>{{amount}}</td>
+  <td>{{date}}</td>
+  <td>
+    <button type="button" {{action 'changeEditMode'}}>Edit</button>
+    <button type="button" {{action 'destroy'}}>Delete</button>
+  </td>
+
+{{/if}}
 
 {{yield}}
