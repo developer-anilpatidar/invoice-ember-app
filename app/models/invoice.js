@@ -3,5 +3,5 @@ const { Model } = DS;
 
 export default Model.extend({
   amount: DS.attr('number'),
-  date: DS.attr('date'),
+  date: DS.attr('isodate'),
 });

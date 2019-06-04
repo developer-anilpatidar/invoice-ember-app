@@ -1,5 +1,24 @@
 <h1>Invoices</h1>
 
+{{#if responseMessage }}
+  <h4>{{responseMessage}}</h4>
+{{/if}}
+
+
+<div>
+  <div>
+    <div>
+      {{input type="text" value=amount placeholder="Enter Amount"}}
+    </div>
+    <div>
+      {{input type="date" value=date}}
+    </div>
+    <div>
+      <button type="button" {{action 'saveInvoice'}}>Save</button>
+    </div>
+  </div><br/>
+</div>
+
 <table>
   <thead>
     <tr>
